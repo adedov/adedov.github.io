@@ -2,7 +2,7 @@
 layout: post
 title: "OAuth Meets PDP"
 author: "Anton Dedov <adedov@gmail.com>"
-date: "2026-10"
+date: "2026-10-29"
 ---
 
 * TOC
