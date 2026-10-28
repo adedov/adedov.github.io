@@ -34,7 +34,7 @@ On a picture below we've got a pieces of two worlds combined:
 
 - \[blue\] **PEP/PDP architecture:** a resource API authorizes each external request in PDP before letting it to reach a resource.
 
-  ![oauth-and-pdp-1.png](img/oauth-and-pdp-1-2.png)
+  ![oauth-and-pdp-1.png](img/oauth-and-pdp-1.png)
 
 &nbsp;
 
@@ -190,7 +190,7 @@ To authorize incoming API-request "OAuth-aware" PDP will have to
 
   * Check(sub, operation, resource)
 
-  ![uc2-authz.png](img/uc2-authz-3.png)
+  ![uc2-authz.png](img/uc2-authz.png)
 
 &nbsp;
 
@@ -238,7 +238,7 @@ So, if system is integrated with such "vanilla" PDP, "OAuth-aware" will:
   * Check(**token-sub**, operation, resource, **ephemeral policy**): *checking token scopes are authorized for a current API-request.*
   * Check(sub, operation, resource): *actual end-user authorization.*
 
-![uc3-authz.png](img/uc3-authz-3.png)
+![uc3-authz.png](img/uc3-authz.png)
 
 **Note 1:** We cannot use **u\+c** subject instead of **token-sub** in this case because in the u\+c case "vanilla" PDP would not be able tell persisted grants from ephemeral ones that came from token. Thus the token would potentially get more power than intended by it's creator.
 
@@ -261,7 +261,7 @@ Works according to 4.2.3
 
 |
 
-![uc2-authz.png](img/uc2-authz-3.png)
+![uc2-authz.png](img/uc2-authz.png)
 
 ||
 ||
@@ -272,7 +272,7 @@ Works according to 4.3.2
 
 |
 
-![uc3-authz.png](img/uc3-authz-3.png)
+![uc3-authz.png](img/uc3-authz.png)
 
 ||
 |#
