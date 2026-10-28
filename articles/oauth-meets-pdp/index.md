@@ -1,6 +1,6 @@
 # OAuth meets PDP
 
-{% toc %}
+{:toc}
 
 ## 1\. Introduction
 
