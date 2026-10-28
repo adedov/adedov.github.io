@@ -1,4 +1,9 @@
-# OAuth meets PDP
+---
+layout: post
+title: "OAuth Meets PDP"
+author: "Anton Dedov <adedov@gmail.com>"
+date: "2026-10"
+---
 
 * TOC
 {:toc}
