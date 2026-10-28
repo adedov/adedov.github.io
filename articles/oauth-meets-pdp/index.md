@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "OAuth Meets PDP"
 author: "Anton Dedov <adedov@gmail.com>"
 date: "2026-10-29"
