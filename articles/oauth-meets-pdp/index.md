@@ -258,7 +258,8 @@ When "vanilla" PDP does not support ephemeral policies, "OAuth-aware" PDP will p
 
 Finally, we can unify the approach from all three use-cases into one picture. Actually, there will be two pictures depending on fact if token contains specific scopes or not:
 
-
+| | |
+|---|---|
 | **Token does not contain scopes**<br>Works according to 4.2.3 | ![uc2-authz.png](img/uc2-authz.png) |
 | **Token contains scopes**<br>Works according to 4.3.2 | ![uc3-authz.png](img/uc3-authz.png) |
 
