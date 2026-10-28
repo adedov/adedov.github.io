@@ -34,7 +34,7 @@ On a picture below we've got a pieces of two worlds combined:
 
 - \[blue\] **PEP/PDP architecture:** a resource API authorizes each external request in PDP before letting it to reach a resource.
 
-  ![oauth-and-pdp-1.png](img/oauth-and-pdp-1-2.png =400x0)
+  ![oauth-and-pdp-1.png](img/oauth-and-pdp-1-2.png)
 
 &nbsp;
 
@@ -45,13 +45,13 @@ It's safe to say that a resource API call should be authorized if both claims me
 
 In other words, a request can be found within an intersection between scopes authorized to a client and actual subject's permissions:
 
-![scopes-and-perms.png](img/scopes-and-perms.png =300x0)
+![scopes-and-perms.png](img/scopes-and-perms.png)
 
 &nbsp;
 
 So, what we can call a **scope**?  PEP usually calls something like *PDP.Check(subject, operation, resource, ctx)* so, it looks natural to form an individual scope as a combination of \{operation, resource, context\} where any element is optional.
 
-![scopes-nature.png](img/scopes-nature.png =450x0)
+![scopes-nature.png](img/scopes-nature.png)
 
 Thus, if we take **operation** as a part of scope, a building part of a scope will be a named set of individual operations (**op-scope)**. In a "classic" cloud IAM this is also known as **role** (not to be confused with roles in RBAC).
 
@@ -82,7 +82,7 @@ The target architecture aims to express OAuth reality in a "vanilla" PDP without
 - check validity of *access_token*
 - interpret contents of *access_token* and convert it to a series of invocations of Check() method in "vanialla" PDP.
 
-![oa-pdp-and-vanilla-pdp.png](img/oa-pdp-and-vanilla-pdp.png =500x0)
+![oa-pdp-and-vanilla-pdp.png](img/oa-pdp-and-vanilla-pdp.png)
 
 &nbsp;
 
@@ -111,7 +111,7 @@ To express persistent scopes, OAuth authorization endpoint will need to communic
 - Provide access policy that express granted scopes for the **u\+c** subject.
   For example, policy can be a set of access bindings in a form of triples (subject, role, resource).
 
-![as-to-pap.png](img/as-to-pap.png =500x0)
+![as-to-pap.png](img/as-to-pap.png)
 
 **Implementation note:** Depending on the authorization model behind the PDP, a synthetic subject may either be explicitly created in the authorization system or exist only as part of an authorization relationship. An important property, though, is that it must have a deterministic ID that both the OAuth AS and the "OAuth-aware" PDP can generate from the same input parameters. For example, one could use `delegation:{client_id}:{subject_id}` as an ID generation scheme.
 
@@ -129,7 +129,7 @@ To authorize incoming API-request "OAuth-aware" PDP will have to
   * Check(**u\+c**, operation, resource): *checking user authorized scopes corresponding to a current API-request.*
   * Check(sub, operation, resource): *actual end-user authorization.*
 
-![uc1-authz.png](img/uc1-authz.png =500x0)
+![uc1-authz.png](img/uc1-authz.png)
 
 &nbsp;
 
@@ -190,7 +190,7 @@ To authorize incoming API-request "OAuth-aware" PDP will have to
 
   * Check(sub, operation, resource)
 
-  ![uc2-authz.png](img/uc2-authz-3.png =500x0)
+  ![uc2-authz.png](img/uc2-authz-3.png)
 
 &nbsp;
 
@@ -238,7 +238,7 @@ So, if system is integrated with such "vanilla" PDP, "OAuth-aware" will:
   * Check(**token-sub**, operation, resource, **ephemeral policy**): *checking token scopes are authorized for a current API-request.*
   * Check(sub, operation, resource): *actual end-user authorization.*
 
-![uc3-authz.png](img/uc3-authz-3.png =500x0)
+![uc3-authz.png](img/uc3-authz-3.png)
 
 **Note 1:** We cannot use **u\+c** subject instead of **token-sub** in this case because in the u\+c case "vanilla" PDP would not be able tell persisted grants from ephemeral ones that came from token. Thus the token would potentially get more power than intended by it's creator.
 
@@ -246,7 +246,7 @@ So, if system is integrated with such "vanilla" PDP, "OAuth-aware" will:
 
 When "vanilla" PDP does not support ephemeral policies, "OAuth-aware" PDP will probably have to emulate it's behavior. This approach would make "OAuth-aware" PDP to incorporate knowledge about resource/policy structure and at least partially duplicate some logic "vanilla" PDP. So this is rather architectural trade-off.
 
-![uc3-authz-2.png](img/uc3-authz-2.png =500x0)
+![uc3-authz-2.png](img/uc3-authz-2.png)
 
 ### 4\.4 Put Puzzle Together
 
@@ -261,7 +261,7 @@ Works according to 4.2.3
 
 |
 
-![uc2-authz.png](img/uc2-authz-3.png =500x0)
+![uc2-authz.png](img/uc2-authz-3.png)
 
 ||
 ||
@@ -272,7 +272,7 @@ Works according to 4.3.2
 
 |
 
-![uc3-authz.png](img/uc3-authz-3.png =500x0)
+![uc3-authz.png](img/uc3-authz-3.png)
 
 ||
 |#
