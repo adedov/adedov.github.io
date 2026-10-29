@@ -290,7 +290,8 @@ This may enable useful features on "vanilla" PDP side (if it has support):
 
 - **Conditional access policies**: An administrator can grant some roles/permissions to end-users only if user access specific API via approved client.
 - **DENY rules**: Deny some clients to access sensitive resources.
-- **Ephemeral + Conditional access policies**: This level of expressiveness could enable authorizations for in-token RAR grants. 
+- **Ephemeral + Conditional access policies**: This level of expressiveness could enable authorizations for in-token RAR grants.
+- **Obligations**: A PDP can return a conditional authorization decision requiring additional actions before access is permitted, either during grant validation or end-user authorization.. 
 
 &nbsp;
 
