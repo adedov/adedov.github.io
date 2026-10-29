@@ -288,8 +288,9 @@ Finally, we can unify the approach from all three use-cases into one picture. Ac
 
 This may enable useful features on "vanilla" PDP side (if it has support):
 
-- **Conditional bindings**: An administrator can grant some roles/permissions to end-users only if user access specific API via approved client.
+- **Conditional access policies**: An administrator can grant some roles/permissions to end-users only if user access specific API via approved client.
 - **DENY rules**: Deny some clients to access sensitive resources.
+- **Ephemeral + Conditional access policies**: This level of expressiveness could enable authorizations for in-token RAR grants. 
 
 &nbsp;
 
