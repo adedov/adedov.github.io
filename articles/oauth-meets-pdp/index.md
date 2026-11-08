@@ -281,12 +281,14 @@ Finally, we can unify the approach from all three use-cases into one picture. Ac
 <!-- ![uc2-authz.png](img/uc2-authz.png) -->
 <!-- ![uc3-authz.png](img/uc3-authz.png) -->
 
-| | |
+| _Use-case Class_ | _PEP-PDP Contract_ |
 |---|---|
 | **Token does not contain scopes**<br>Works according to 4.2.3 | <img src="img/uc2-authz.png" width="500px"> |
 | **Token contains scopes**<br>Works according to 4.3.2 | <img src="img/uc3-authz.png" width="500px"> |
 
-The final architecture, looks as follows: in most general case one needs both "OAuth-aware" PDP and PAP (for communication with OAuth AS). The PEP can be generic, especially if "OAuth-aware" PDP implements standard API, like AuthZEN.
+Note that it would be helpful if the "OAuth-aware" PDP returned different denial reasons for failed OAuth grant checks and subject permission checks (green and black arrows in the diagrams). This would allow the PEP to distinguish insufficient OAuth scopes from insufficient subject permissions.
+
+**The final architecture, looks as follows**: in most general case one needs both "OAuth-aware" PDP and PAP (for communication with OAuth AS). The PEP can be generic, especially if "OAuth-aware" PDP implements standard API, like AuthZEN.
 
 <img src="img/final-architecture.png" width="500px">
 
