@@ -66,7 +66,7 @@ In other words, a request can be found within an intersection between scopes aut
 So, what we can call a **scope**?  PEP usually calls something like *PDP.Check(subject, operation, resource, ctx)* so, it looks natural to form an individual scope as a combination of \{operation, resource, context\} where any element is optional.
 
 <!-- ![scopes-nature.png](img/scopes-nature.png) -->
-<img src="img/scopes-nature.png" width="450px">
+<img src="img/scopes-nature.png" width="500px">
 
 Thus, if we take **operation** as a part of scope, a building part of a scope will be a named set of individual operations (**op-scope)**. In a "classic" cloud IAM this is also known as **role** (not to be confused with roles in RBAC).
 
