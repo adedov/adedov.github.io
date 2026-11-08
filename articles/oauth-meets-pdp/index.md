@@ -2,14 +2,14 @@
 layout: default
 title: "OAuth Meets PDP"
 author: "Anton Dedov <adedov@gmail.com>"
-date: "2026-10-29"
+date: "2026-11-08"
 revision: "1.1"
 ---
 
 # OAuth Meets PDP
 
 Rev: {{ page.revision }}
-Date: {{ page.last_modified_at | %Y-%m-%d }}
+Date: {{ page.date }}
 
 * TOC
 {:toc}
@@ -132,7 +132,7 @@ To express persistent scopes, OAuth authorization endpoint will need to communic
 
 **Implementation note 1:** Depending on the authorization model behind the PDP, a synthetic subject may either be explicitly created in the authorization system or exist only as part of an authorization relationship. An important property, though, is that it must have a deterministic ID that both the OAuth AS and the "OAuth-aware" PDP can generate from the same input parameters. For example, one could use `delegation:{client_id}:{subject_id}` as an ID generation scheme.
 
-**Implementation note 2:** Since the OAuth AS needs to create authorization policies through the generic PAP, it may require more privileges than it should have, depending on the system's trust boundaries. In such cases, I'd recommend introducing an **"OAuth-aware" PAP** as well. It should authenticate the OAuth AS and restrict its policy modifications to delegation subjects and the permissions it is authorized to grant, rejecting any attempts to modify unrelated authorization policies.
+**Implementation note 2:** Since the OAuth AS needs to create authorization policies through the generic PAP, it may require more privileges than it should have, depending on the system's trust boundaries. In such cases, I'd recommend introducing an **"OAuth‑aware"&nbsp;PAP** as well. It should authenticate the OAuth AS and restrict its policy modifications to delegation subjects and the permissions it is authorized to grant, rejecting any attempts to modify unrelated authorization policies.
 
 #### 4\.1.2 Token Contents
 
