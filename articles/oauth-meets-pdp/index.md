@@ -8,7 +8,7 @@ revision: "1.1"
 
 # OAuth Meets PDP
 
-Rev: {{ page.revision }}
+Rev: {{ page.revision }}<br>
 Date: {{ page.date }}
 
 * TOC
@@ -283,6 +283,8 @@ Finally, we can unify the approach from all three use-cases into one picture. Ac
 | **Token does not contain scopes**<br>Works according to 4.2.3 | <img src="img/uc2-authz.png" width="500px"> |
 | **Token contains scopes**<br>Works according to 4.3.2 | <img src="img/uc3-authz.png" width="500px"> |
 
+The final architecture, looks as follows: in most general case one needs both "OAuth-aware" PDP and PAP (for communication with OAuth AS). The PEP can be generic, especially if "OAuth-aware" PDP implements standard API, like AuthZEN. 
+<img src="img/final-architecture.png" width="500px">
 
 ### 4\.5 More PDP Features in Charge
 
