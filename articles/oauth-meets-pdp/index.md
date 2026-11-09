@@ -281,7 +281,7 @@ Finally, we can unify the approach from all three use-cases into one picture. Ac
 <!-- ![uc2-authz.png](img/uc2-authz.png) -->
 <!-- ![uc3-authz.png](img/uc3-authz.png) -->
 
-| _Use-case Class_ | _PEP-PDP Contract_ |
+| _Use-case Class_ | _PDP-PDP Contract_ |
 |---|---|
 | **Token does not contain scopes**<br>Works according to 4.2.3 | <img src="img/uc2-authz.png" width="500px"> |
 | **Token contains scopes**<br>Works according to 4.3.2 | <img src="img/uc3-authz.png" width="500px"> |
